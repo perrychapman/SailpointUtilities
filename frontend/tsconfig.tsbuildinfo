@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/modal.tsx","./src/components/notification.tsx","./src/components/sidebar.tsx","./src/components/tenantmanager.tsx","./src/components/transformdetails.tsx","./src/components/transforms.tsx","./src/utils/transformparser.ts"],"errors":true,"version":"5.7.3"}

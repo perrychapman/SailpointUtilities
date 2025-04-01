@@ -1,0 +1,267 @@
+/* ==== Tenant Manager Container ==== */
+.tenant-manager-container {
+    width: 90vw;
+    max-width: 800px;
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    overflow: hidden;
+    margin: auto;
+}
+
+/* ==== Tenant Manager Header ==== */
+.tenant-manager-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--card-background);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ==== Active Tenant Section ==== */
+.active-tenant-section {
+    padding: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 50px;
+    z-index: 9;
+}
+
+/* ==== Tenant List (Scrollable) ==== */
+.tenant-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding-top: 5px;
+}
+
+/* ==== Tenant Item Styling ==== */
+.tenant-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    background: var(--card-background);
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 8px;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    align-items: flex-start;
+}
+
+/* ==== Active Tenant Styling ==== */
+.tenant-item.active {
+    border: 2px solid var(--primary-color);
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Activate Button */
+.activate-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.activate-btn:hover {
+    background: #0056b3;
+}
+
+/* ==== Delete Button - Top Right ==== */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ==== Tenant Info Section ==== */
+.tenant-info {
+    text-align: left;
+}
+
+/* ==== Tenant Status ==== */
+.tenant-status {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.tenant-status.authenticated {
+    color: var(--complementary-color);
+}
+
+.tenant-status.error {
+    color: var(--accent-color);
+}
+
+/* ==== Last Auth Date Styling ==== */
+.tenant-last-auth {
+    font-size: 12px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* ==== Button Container - Bottom Right ==== */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* ==== Standard Buttons ==== */
+button {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+    color: white;
+}
+
+/* ==== Primary Button ==== */
+.primary-btn {
+    background: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background: #0056b3;
+}
+
+/* ==== Secondary Button ==== */
+.secondary-btn {
+    background: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+    background: #5a6268;
+}
+
+/* ==== Complementary Button ==== */
+.complementary-btn {
+    background: var(--complementary-color);
+}
+
+.complementary-btn:hover {
+    background: #138496;
+}
+
+/* ==== Modal Styling ==== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 250px;
+    z-index: 21;
+}
+
+/* Modal Title */
+.modal-title {
+    color: var(--text-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Modal Body */
+.modal-body {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* ==== Form Fields ==== */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Grouping label and input together */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+.modal label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--text-color);
+}
+
+/* Input Field Styling */
+.modal input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+    display: block;
+}
+
+/* Highlight field when focused */
+.modal input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ==== Bottom-right justify buttons inside modal ==== */
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+}

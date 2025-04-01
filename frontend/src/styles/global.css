@@ -1,0 +1,210 @@
+/* ==== Global UI Color Scheme ==== */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --complementary-color: #17a2b8;
+    --accent-color: #dc3545;
+    --background-color: #e4e4ee;
+    --card-background: #ffffff;
+    --modal-background: #eeeeee;
+    --border-color: #d1d1d1;
+    --text-color: #333;
+}
+
+/* ==== Reset Base Styling ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh; /* Strictly enforces full viewport height */
+    width: 100vw;
+    overflow: hidden; /* Prevents global scrolling */
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==== Main App Layout (Strictly Enforces 100vh) ==== */
+.app-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Ensures app does NOT exceed the viewport */
+    width: 100vw;
+    overflow: hidden; /* Ensures no unwanted scrollbars */
+}
+
+/* ==== Sidebar Styling ==== */
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh; /* Sidebar always takes full height */
+    background: #1e1e2d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Allows sidebar scrolling if needed */
+}
+
+/* ==== Content Area (No Extra Height) ==== */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* Ensures `.content` fits inside `.app-container` */
+    overflow: hidden; /* Prevents unnecessary scrolling */
+}
+
+/* ==== Content Wrapper (Only This Scrolls) ==== */
+.content-wrapper {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Allows internal scrolling */
+    overflow-x: hidden;
+    height: 100%; /* Keeps it inside `.content` */
+}
+
+/* ==== Prevent Child Components from Expanding `.content` ==== */
+.content-wrapper > * {
+    flex-grow: 1;
+    max-height: 100%;
+    overflow: auto;
+}
+
+
+/* ==== Typography & Base Elements ==== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* ==== Global Button Styles ==== */
+.button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* ==== Button Variants ==== */
+.primary-btn {
+    background-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: #0062cc; /* Slightly darker shade of primary color */
+    transform: scale(1.01); /* Apply scaling effect */
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268; /* Slightly darker shade of secondary color */
+    transform: scale(1.01); /* Apply scaling effect */
+}
+
+.complementary-btn {
+    background-color: var(--complementary-color);
+}
+
+.complementary-btn:hover {
+    background-color: #138496; /* Slightly darker shade of complementary color */
+    transform: scale(1.01); /* Apply scaling effect */
+}
+
+.accent-btn {
+    background-color: var(--accent-color);
+}
+
+.accent-btn:hover {
+    background-color: #c82333; /* Slightly darker shade of accent color */
+    transform: scale(1.01); /* Apply scaling effect */
+}
+
+/* ==== Button Disabled State ==== */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+/* ==== Animations ==== */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* ==== Utility Classes ==== */
+.hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}

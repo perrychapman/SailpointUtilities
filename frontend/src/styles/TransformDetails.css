@@ -1,0 +1,129 @@
+/* Transform Details Main Container */
+.transform-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+/* Header with Back Button */
+.transform-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transform-header h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.transform-back-btn {
+    background: var(--secondary-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.transform-back-btn:hover {
+    background: #5a6268;
+}
+
+/* Grid Layout for Sections */
+.transform-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    flex-grow: 1;
+    height: calc(100vh - 150px);
+}
+
+/* Main Transform Information */
+.primary-section {
+    grid-column: 1 / 3;
+    padding: 20px;
+    background: var(--modal-background);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+/* Inputs and Output Panels */
+.secondary-section {
+    background: var(--modal-background);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    min-height: 120px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.inputs-panel {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.output-panel {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 100px;
+}
+
+.output-preview {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+/* Parsed and JSON Panels */
+.tertiary-section {
+    background: var(--modal-background);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    overflow-y: auto;
+}
+
+.parsed-notation-panel {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.json-panel {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* Code Display */
+.json-display {
+    width: 100%;
+    color: #dcdcdc;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+}
+
+/* Syntax Highlighting */
+pre[class*="language-"] {
+    background: #1e1e1e !important;
+    color: #dcdcdc !important;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}

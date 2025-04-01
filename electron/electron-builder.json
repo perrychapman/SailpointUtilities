@@ -1,0 +1,42 @@
+{
+  "appId": "com.transform.builder",
+  "productName": "TransformBuilder",
+  "directories": {
+    "output": "../dist-v1.0"
+  },
+  "files": [
+    "main.js",
+    "preload.js",
+    {
+      "from": "../frontend/dist",
+      "to": "dist",
+      "filter": [
+        "**/*"
+      ]
+    },
+    {
+      "from": "../backend",
+      "to": "backend",
+      "filter": [
+        "**/*.js",
+        ".env",
+        "tenants.json"
+      ]
+    }
+  ],
+  "asarUnpack": [
+    "**/backend/**"
+  ],
+  "win": {
+    "target": "portable",
+    "sign": false,
+    "publisherName": null
+  },
+  "mac": {
+    "target": "dir",
+    "sign": false,
+    "identity": null,
+    "hardenedRuntime": false,
+    "gatekeeperAssess": false
+  }
+}

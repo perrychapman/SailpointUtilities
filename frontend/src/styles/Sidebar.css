@@ -1,0 +1,86 @@
+/* ==== Sidebar Styling ==== */
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    height: 100%;
+    background: #1e1e2d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+.sidebar-header * {
+    color: white !important;
+    font-size: 20px !important;
+}
+
+.sidebar-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Logo */
+.sailpoint-logo {
+    width: 80px;
+    margin-top: 10px;
+}
+
+/* Active Tenant Display */
+.active-tenant-card {
+    background: var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.active-tenant-card * {
+    color: white !important;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+/* Sidebar Buttons */
+.sidebar-btn {
+    background: #6c757d;
+    color: white;
+    padding: 12px;
+    width: 90%;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.sidebar-btn.active {
+    background: #007bff;
+}
+
+.sidebar-btn:hover {
+    background: #5a6268;
+}

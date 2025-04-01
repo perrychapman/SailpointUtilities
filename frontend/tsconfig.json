@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // Required for JSX support in TypeScript
+    "moduleResolution": "node",
+    "strict": true,
+    "target": "ES6",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"], // Include your source files
+  "exclude": ["node_modules"]
+}
